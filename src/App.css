@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  flex-direction: row;
+  
+}
+
+.selector{
+  
+  background-color: purple;
+
+}
+.selector:hover{
+  background-color: blueviolet;
+  border: 10px;
+}
+option{
+  background-color: blueviolet;
+}
+
+
