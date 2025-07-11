@@ -10,7 +10,7 @@
 .selector{
   
   background-color: purple;
-
+  width: 80px;
 }
 .selector:hover{
   background-color: blueviolet;

@@ -1,21 +1,16 @@
-import { getDataApi } from "../utils/getdataapi";
+import { getDataApi } from "../../utils/getdataapi.js";
 import "./pokelist.css"
-import { filtrarPorTexto } from "../utils/filtrarPorTexto";
+import { filtrarPorTexto } from "../../utils/filtrarPorTexto";
 import { useState } from "react";
 
 
 
-const data = await getDataApi("https://pokeapi.co/api/v2/pokemon?limit=300");
-console.log(data)
+const data = await getDataApi("https://pokeapi.co/api/v2/pokemon?limit=50");
+
 
 const detalles = await Promise.all(
   data.results.map(poke => getDataApi(poke.url))
 );
-
-console.log(detalles)
-
-
-
 
 export default function ListadePokemones() {
   const [search, setSearch] = useState('')
@@ -29,9 +24,9 @@ export default function ListadePokemones() {
       {resultadosFiltrados.map((resultadosFiltrados) => {
 
         return (
-          <div >
+          <div key={resultadosFiltrados.id}>
 
-            <div className="card" key={resultadosFiltrados.name}>
+            <div className="card" >
 
               <p id="name">{resultadosFiltrados.name}</p>
               <img src={resultadosFiltrados.sprites.front_default} alt={resultadosFiltrados.name} width={320} height={320} />
@@ -39,9 +34,13 @@ export default function ListadePokemones() {
 
                 <p> Id {resultadosFiltrados.id}</p>
                 <p> weight {resultadosFiltrados.weight}</p>
-                {resultadosFiltrados.abilities.map((item) => (
-                  <p key={item.ability.name}>{item.ability.name}</p>)
-                )}
+                <div> <p>Abilities</p>
+                  {resultadosFiltrados.abilities.map((item) => (
+                    <p key={item.ability.name}>{item.ability.name}</p>)
+                  )}
+
+                </div>
+
 
               </div>
 
