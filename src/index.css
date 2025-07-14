@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,3 +13,55 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@import "tailwindcss";
+
+.rgb-input {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 600% 600%;
+  animation: rgb-move 7s linear infinite;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9999px;
+}
+
+.rgb-input::placeholder {
+  color: black;
+}
+
+@keyframes rgb-move {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.purple-glow-input {
+  background: linear-gradient(270deg, #6a0dad, #a855f7, #9333ea, #6a0dad);
+  background-size: 400% 400%;
+  animation: purpleFlow 6s linear infinite;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+.purple-glow-input::placeholder {
+  color: #e0e0e0;
+}
+
+@keyframes purpleFlow {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}

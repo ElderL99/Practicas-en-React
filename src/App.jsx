@@ -1,32 +1,32 @@
-import './App.css'
+
 import ListadePokemones from './pages/pokemon/pokelist.jsx'
 import RickCard from './pages/rick/page.jsx'
 import { useState } from 'react'
 
 
-function App() {
+export default function App() {
   const [select, Setselect] = useState("pokemon")
 
 
   return (
-    <div className='container'>
-      <select className='selector' value={select} onChange={(e) => Setselect(e.target.value)}>
-        <option value="pokemon">Pokémon</option>
+    <div className='flex justify-center gap-10 p-10'>
 
-        <option value="rick">Rick</option>
+      <div>
+        <select className='purple-glow-input' value={select} onChange={(e) => Setselect(e.target.value)}>
+          <option value="pokemon">Pokémon</option>
+          <option value="rick">Rick</option>
+         </select>
+      </div>
 
-        <option value="posts">Posts</option>
+      <div>
+        {select === "pokemon" && <ListadePokemones />}
+        {select === "rick" && <RickCard />}
+      </div>
 
 
 
-      </select>
 
-      {select === "pokemon" && <ListadePokemones/> }
-      {select=== "rick" && <RickCard />}
-      {select === "posts" && <h1>Aquí irán los Post</h1>}
-      
     </div>
   )
 }
 
-export default App
