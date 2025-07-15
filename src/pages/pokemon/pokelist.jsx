@@ -7,7 +7,7 @@ import Searchbar from "../../components/SearchBar.jsx";
 
 
 
-const data = await getDataApi("https://pokeapi.co/api/v2/pokemon?limit=50");
+const data = await getDataApi("https://pokeapi.co/api/v2/pokemon?limit=150");
 
 
 const detalles = await Promise.all(
@@ -18,7 +18,7 @@ export default function ListadePokemones() {
   const [search, setSearch] = useState('')
   const resultadosFiltrados = filtrarPorTexto(detalles, "name", search)
   return (
-    <div className="max-w-3xl mx-auto p-4  ">
+    <div className=" mx-auto p-4  ">
 
       <div className="flex justify-center shadow-3x2 ">
         <Searchbar value={search} onChange={(e) => setSearch(e.target.value)} />
@@ -28,7 +28,7 @@ export default function ListadePokemones() {
         Encuentra tu Pokémon Favorito
       </h1>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {resultadosFiltrados.map((resultadosFiltrados) => {
 
           return (

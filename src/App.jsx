@@ -13,8 +13,8 @@ export default function App() {
 
       <div>
         <select className='purple-glow-input' value={select} onChange={(e) => Setselect(e.target.value)}>
-          <option value="pokemon">Pokémon</option>
-          <option value="rick">Rick</option>
+          <option className='bg-neutral-800 hover:bg-neutral-800' value="pokemon">Pokémon</option>
+          <option className='bg-neutral-800 hover:bg-neutral-800' value="rick">Rick</option>
          </select>
       </div>
 

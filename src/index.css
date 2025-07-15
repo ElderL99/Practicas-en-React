@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import "tailwindcss";
+
 
 .rgb-input {
   position: relative;
@@ -32,17 +35,11 @@
 }
 
 @keyframes rgb-move {
-  0% {
-    background-position: 0% 100%;
-  }
-
-  100% {
-    background-position: 100% 0%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .purple-glow-input {
-  background: linear-gradient(270deg, #6a0dad, #a855f7, #9333ea, #6a0dad);
   background-size: 400% 400%;
   animation: purpleFlow 6s linear infinite;
   color: white;
@@ -53,15 +50,19 @@
 }
 
 .purple-glow-input::placeholder {
-  color: #e0e0e0;
+  color: gray;
+  
 }
 
 @keyframes purpleFlow {
-  0% {
-    background-position: 0% 100%;
-  }
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
-  100% {
-    background-position: 100% 0%;
-  }
-};
+
+svg {
+  transition: fill 1s ease;
+}
+svg:hover {
+  fill: #a855f7; /* morado bonito */
+}

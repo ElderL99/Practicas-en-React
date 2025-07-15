@@ -37,12 +37,12 @@ export default function RickCard() {
 
             <div>
                 <h1 className="text-3xl font-bold text-center mb-6 text-amber-300 p-5 items-center">
-                    Encuentra tu Pokémon Favorito
+                    Encuentra tu Personaje Favorito
                 </h1>
             </div>
 
             <div >
-                <div className="grid grid-cols-2 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filterCharacters.map((Personaje) => {
                         return (
                             <div className="p-3 hover:scale-105 transition-all duration-350 cursor-pointer" key={Personaje.name}>
