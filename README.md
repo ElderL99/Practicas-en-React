@@ -1,12 +1,27 @@
-# React + Vite
+# 🧪 Practicas en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene una serie de pequeñas prácticas desarrolladas con **React**, que incluyen componentes funcionales, consumo de APIs, estilos con Tailwind y efectos visuales. Es parte de mi aprendizaje para dominar el desarrollo frontend moderno.
 
-Currently, two official plugins are available:
+👉 **Demo en Vercel:**  
+🔗 https://vercel.com/elder-l99/practicas-en-react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Componente **Counter** con incremento/decremento
+- ✅ Lista de tareas **TodoList** con agregar y eliminar
+- ✅ Integración con **APIs públicas** (Rick and Morty, PokéAPI)
+- ✅ Estilos personalizados con **TailwindCSS**
+- ✅ Animaciones con `@keyframes`, `hover`, gradientes y más
+- ✅ Diseño responsive con **Flex** y **Grid**
+
+---
+
+## 🚀 Instalación y ejecución
+
+```bash
+git clone https://github.com/ElderL99/Practicas-en-React.git
+cd Practicas-en-React
+npm install
+npm run dev
