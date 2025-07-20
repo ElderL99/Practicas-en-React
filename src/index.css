@@ -17,28 +17,6 @@
 }
 
 
-
-.rgb-input {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
-  background-size: 600% 600%;
-  animation: rgb-move 7s linear infinite;
-  color: black;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 9999px;
-}
-
-.rgb-input::placeholder {
-  color: black;
-}
-
-@keyframes rgb-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
 .purple-glow-input {
   background-size: 400% 400%;
   animation: purpleFlow 6s linear infinite;

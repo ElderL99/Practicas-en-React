@@ -4,15 +4,24 @@ import './index.css'
 import App from './App.jsx'
 
 import Footer from './components/footer.jsx'
+import SideBar from './components/SideBar.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <div className=''>
+      <div className="min-h-screen flex">
 
-    <div className='min-h-screen flex flex-col justify-between'>
-      <main className='flex-grow'><App /></main>
-      <div className='bg-neutral-900 p-6 w-full'><Footer /> </div>
+        <main className="w-full">
+          <App />
+        </main>
+
+      </div>
+      <div className="footer">
+        <footer className="bg-neutral-900 p-6 w-full">
+          <Footer />
+        </footer>
+      </div>
     </div>
 
-
   </StrictMode>,
-)
+);
